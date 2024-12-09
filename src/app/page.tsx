@@ -3,6 +3,7 @@ import {
   Abstraxion,
   useAbstraxionAccount,
   useModal
+  
 } from "@burnt-labs/abstraxion";
 import { Button } from "@burnt-labs/ui";
 import { useEffect } from "react";
@@ -10,7 +11,12 @@ import { useEffect } from "react";
 
 export default function Page(): JSX.Element {
   // Abstraxion hooks
+
+  // самая важная строчка и метод useAbstraxionAccount()
+  // bech32Address - address, that we need!
+
   const { data: { bech32Address }, isConnected, isConnecting } = useAbstraxionAccount();
+
 
   // General state hooks
   const [, setShow] = useModal();
